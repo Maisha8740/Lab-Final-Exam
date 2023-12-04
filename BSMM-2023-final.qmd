@@ -1,0 +1,443 @@
+---
+title: "BSMM-final"
+subtitle: "BSMM 8740 Fall 2023"
+author: "Add your name here"
+date: "Add the date here"
+editor: visual
+format: html
+self-contained: true
+---
+
+```{r}
+#| echo: false
+require(magrittr, quietly=T)
+require(ggplot2, quietly=T)
+```
+
+# Instructions
+
+::: callout-important
+To access Github from the lab, you will need to make sure you are logged in as follows:
+
+-   username: **.\\daladmin**
+-   password: **Business507!**
+
+Remember to
+
+-   create your PAT using `usethis::create_github_token()` ,
+-   store your PAT with `gitcreds::gitcreds_set()` ,
+-   set your username and email with
+    -   `usethis::use_git_config( user.name = ___, user.email = ___)`
+:::
+
+## Overview
+
+The final will be released on Monday, December 04, and is designed to be completed in 120+ minutes.
+
+The exam will consist of two parts:
+
+1.  **Part 1 - Conceptual:** Simple questions designed to evaluate your familiarity with the written course notes.
+2.  **Part 2 - Applied:** Data analysis in RStudio (like a usual lab, but simpler).
+
+Log in to *your* github account and then go to the [GitHub organization](https://github.com/bsmm-8740-fall-2023) for the course and find the **BSMM-midterm-\[your github username\]** repository to complete the exam.
+
+Create an R project using your `midterm` repository (remember to create a PAT, etc., as in lab-1) and add your answers by editing the `midterm.qmd` file in your repository. Your first edits should be to the **date** and **your name** (as author) at the top of this document.
+
+Be sure that you have [saved]{.underline}, [staged]{.underline}, [committed]{.underline}, and [pushed]{.underline} your work before the end of the exam.
+
+🍀 Good luck! 🍀
+
+## Academic Integrity
+
+By taking this exam, you pledge to that:
+
+-   I will not lie, cheat, or steal in my academic endeavors;
+
+-   I will conduct myself honorably in all my endeavors; and
+
+-   I will act if the Standard is compromised.
+
+## Rules & Notes
+
+-   This is an individual assignment. Everything in your repository is for your eyes only.
+
+-   You may not collaborate or communicate anything about this exam to **anyone** except the instructor. For example, you may not communicate with other students or post/solicit help on the internet, email or via any other method of communication.
+
+-   The exam is open-book, open-note, so you may use any materials from class as you take the exam.
+
+## Submission
+
+-   Your answers should be typed in the document below (or answer by deleting alternative answers in multiple choice questions.
+
+-   Make sure you **commit** any changes and **push** the changes to the course repository before the end of the exam.
+
+-   Once the final exam has ended, the contents of your repository will be pulled for grading. This will happen only once, so no changes made after the end of the exam will be recorded.
+
+------------------------------------------------------------------------
+
+# Part 1
+
+## Q-1
+
+In the context of time series, ***partial autocorrelation*** measures:
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+*Delete the wrong answer(s):*
+
+-   The direct effect of past values on the current value
+-   The total correlation between two points in time
+-   The indirect effect of past values on the current value
+-   The correlation between two variables, removing the effect of intervening variables
+:::
+
+## Q-2
+
+In a causal DAG, a ***confounder*** is:
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+*Delete the wrong answer(s) below*.
+
+-   A variable that is affected by the cause
+-   A variable that influences both the cause and effect
+-   A variable that has no impact on the relationship
+-   A variable that is only affected by the effect
+:::
+
+## Q-3
+
+***Stationarity*** in time series analysis means that:
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+*Delete the wrong answer(s) below*.
+
+-   The series has no missing values
+-   The series is increasing over time
+-   The series has a constant mean and variance over time
+-   The series is represented by a straight line
+:::
+
+## Q-4
+
+For the binary classifier with the confusion matrix below:
+
+![](images/binary_confusion.png){fig-align="center" width="250"}
+
+The ***precision*** of this binary classifier is approximately:
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Delete the wrong answer(s) below:
+
+-   0.11
+-   0.85
+-   0.74
+-   0.58
+-   0.77
+:::
+
+## Q-5
+
+Which distance metric is not commonly used in kNN classifiers?
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Keep the answer(s) you think might be appropriate
+
+-   Euclidean distance
+-   Manhattan distance
+-   Cosine similarity
+-   Minkowski distance
+:::
+
+## Q6
+
+In causal DAGs, what does a directed edge represent?
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Delete the wrong answer(s) below
+
+-   Correlation
+-   Causation
+-   Similarity
+-   Distance
+:::
+
+## Q7
+
+How does the kNN algorithm typically perform on very large datasets?:
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Delete the wrong answer(s) below
+
+-   It becomes faster as it has more data points to search
+-   It becomes slower due to the increased computation of distances
+-   Its performance does not depend on the size of the dataset
+-   It automatically reduces the dimensionality of the data
+:::
+
+## Q8
+
+![](images/dag.png){fig-align="center" width="500"}
+
+How many open paths are in the DAG above?
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Delete the wrong answer(s) below
+
+-   1
+-   2
+-   3
+-   4
+-   5
+:::
+
+## Q9
+
+What is the purpose of introducing a soft margin in a SVM?
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Delete the wrong answer(s) below
+
+-   To ensure that the SVM can only be used for linearly separable data
+-   To reduce the dimensionality of the feature space
+-   To allow for a certain degree of misclassification in the training data
+-   To increase the computational efficiency of the model
+:::
+
+## Q10
+
+Which of the following is not a typical component of time series data?
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER (1 point) :
+
+Delete the wrong answer(s) below
+
+-   Trend
+-   Seasonality
+-   Heteroskedasticity
+-   Cyclical
+:::
+
+# Part 2
+
+## Q11
+
+This question uses data for the closing prices of the five major Canadian banks from 2005-08-10 to 2023-09-29. The data was obtained using the following code (the difference in the time range is due to elimination of rows with NA values:
+
+``` r
+tidyquant::tq_get(
+  c("TD","BMO","BNS","RBC","CM")
+  , get = "stock.prices"
+  , from = "2000-01-01"
+  , to = "2023-10-01"
+)
+```
+
+The data can be found in your **data** directory
+
+```{r}
+#| eval: false
+arima_data <- readr::read_csv('data/stock_data.csv', show_col_types = FALSE)
+```
+
+\(1\) Plot the data using functions in the `timetk` package **(1 point)**
+
+```{r}
+#| eval: false
+# A PLOT OF THE CLOSING PRICES FOR THE FIVE MAJOR CANADIAN BANKS
+
+```
+
+The goal is to build and evaluate an **arima** model to predict the stock price of CIBC (symbol 'CM'), using the workflow we developed in class.
+
+\(2\) Create test/trains splits of the data, where the **initial period is 10 years** and the **assessment period is 1 year**. Plot the test/train series for CIBC (symbol 'CM'). **(1 point)**
+
+```{r}
+#| eval: false
+# DEFINITION AND A PLOT (CM) OF TEST & TRAINING SPLITS OF THE DATA
+
+```
+
+\(3\) Define a data preprocessing **recipe** and a **model** definition. The recipe is based on the formula `CM ~ .`, and make sure the data argument uses the training data. The model engine should be **auto_arima**.
+
+Finally, create a **workflow** object containing the recipe and the model spec, and then **fit** the model using the training data. **(1 point)**
+
+```{r}
+#| eval: false
+# A RECIPE
+time_rec <- 
+  
+# A MODEL SPECIFICATION
+model_spec_arima <- 
+  
+# A FITTED WORKFLOW
+workflow_fit_arima <- 
+```
+
+\(4\) Create a **models table** with your fitted model and a **calibration table** that uses the **testing** data. Generate a forecast with the **testing** data and the original **arima_data**. Plot the forecast. **(1 point)**
+
+```{r}
+#| eval: false
+# A MODELS TABLE
+models_tbl <- 
+
+# A CALIBRATION TABLE
+calibration_tbl <- 
+
+# PLOT OF THE FITTED MODEL FORECAST OF THE TRAINING DATA  
+
+```
+
+\(5\) Compute the accuracy metrics for the forecast. What is the $R^2$ (rsq) metric. **(1 point)**
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER:
+
+The rsq metric for the fit of the arima model to the testing data is: \_\_\_\_
+:::
+
+## Q12
+
+Execute the following code to create simulated observational data, where `D` is the treatment variable and `Y` is the response variable.
+
+```{r}
+#| echo: true
+#| message: false
+#| error: false
+set.seed(8740)
+
+n <- 200
+V <- rbinom(n, 1, 0.2)
+W <- 3*V + rnorm(n)
+D <- V + rnorm(n)
+Y <- D + W^2 + 1 + rnorm(n)
+Z <- D + Y + rnorm(n)
+data_obs <- tibble::tibble(V=V, W=W, D=D, Y=Y, Z=Z)
+```
+
+In the code below we fit several different outcome models. Compare the resulting coefficients for `D`. Which regressions appear to lead to unbiased estimates of the causal effect? **(2 points)**
+
+```{r}
+#| echo: true
+#| 
+# linear model of Y on X
+lin_YX <- lm(Y ~ D, data=data_obs)
+# linear model of Y on X and V
+lin_YV <- lm(Y ~ D + V, data=data_obs)
+# linear model Y on X and W
+lin_YW <- lm(Y ~ D + W, data=data_obs)
+```
+
+List all valid adjustment sets for the causal structure in this data. **(2 points)**
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER :
+
+1.  Regressions that appear to lead to unbiased estimates of the causal effect:
+
+2.  Valid adjustment sets for the data used in this question:
+:::
+
+## Q13
+
+For this question we'll use the [**Spam Classification Dataset**]{.underline} available from the UCI Machine Learning Repository. It features a collection of spam and non-spam emails represented as feature vectors, making it suitable for a logistic regression model. The data is in your `data/` directory and the metadata is in the `data/spambase/` directory.
+
+We'll use this data to create a model for detecting email spam using **logistic regression**.
+
+```{r}
+#| eval: false
+#| message: false
+spam_data <- readr::read_csv('data/spam.csv', show_col_types = FALSE) %>% 
+  tibble::as_tibble() %>% 
+  dplyr::mutate(type = forcats::as_factor(type))
+
+```
+
+\(1\) Split the data into test and training sets, and create a default recipe and a default model specification. Use the ***glmnet*** engine for the model, with **penalty** = 0.05 & **mixture** = 0.5. **(1 point)**
+
+```{r}
+#| eval: false
+#| message: false
+set.seed(8740)
+
+default_recipe <- ?
+  
+default_model <- 
+```
+
+\(2\) create a default workflow object with the recipe and the model specification, fit the workflow using `parnsip::fit` and the **training** data, and then generate the testing results by applying the fit to the **testing** data using `broom::augment` . **(1 point)**
+
+```{r}
+#| eval: false
+#| message: false
+default_workflow <- 
+  
+lm_fit <- 
+
+testing_results <-
+
+```
+
+\(3\) Evaluate the testing results by plotting the **roc_auc curve**, and calculating the **accuracy**. **(1 point)**
+
+```{r}
+#| eval: false
+#| message: false
+# ROC_AUC PLOT
+testing_results %>% 
+
+# CALCULATION OF ACCURACY
+testing_results %>%   
+
+```
+
+\(4\) Is there a way you could improve the accuracy of this **model? (1 point)**
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER :
+
+-   This model could be made more accurate by:
+:::
+
+## Q14
+
+1.  When preprocessing data for time series models, what is the function `timetk::step_fourier()` used for? **(1 point)**
+
+2.  Give an example of its use in a recipe that is engineered by use with weekly data records. **(1 point)**
+
+::: {.callout-note appearance="simple" icon="false"}
+## YOUR ANSWER:
+
+-   The `timetk::step_fourier()` function is used for:
+
+-   An example of its use in a recipe that is engineered by use with weekly data records is:
+
+```{r}
+
+```
+:::
+
+# Grading (25 pts)
+
+| **Part**                | **Points** |
+|:------------------------|:----------:|
+| **Part 1 - Conceptual** |     10     |
+| **Part 2 - Applied**    |     15     |
+| **Total**               |     25     |
